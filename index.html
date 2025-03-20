@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Percentage Calculator</h1>
+            <p class="description">A simple and intuitive tool for all your percentage calculation needs.</p>
+        </header>
+        
+        <div class="tabs">
+            <button class="tab active" data-tab="calculator1">What is X% of Y?</button>
+            <button class="tab" data-tab="calculator2">X is what percent of Y?</button>
+            <button class="tab" data-tab="calculator3">Percentage Increase/Decrease</button>
+            <button class="tab" data-tab="calculator4">Percentage Change</button>
+            <button class="tab" data-tab="calculator5">Percentage to Fraction</button>
+            <button class="tab" data-tab="calculator6">Fraction to Percentage</button>
+        </div>
+        
+        <div class="calculator-container">
+            <!-- Calculator 1: What is X% of Y? -->
+            <div class="calculator active" id="calculator1">
+                <h2>What is X% of Y?</h2>
+                <p>Calculate a percentage of a number.</p>
+                
+                <div class="sentence-input">
+                    <span class="input-label">What is</span>
+                    <input type="number" id="percent1" placeholder="X" step="any">
+                    <span class="input-label">% of</span>
+                    <input type="number" id="value1" placeholder="Y" step="any">
+                    <span class="input-label">?</span>
+                    <button class="calculate-btn" id="calculate1">CALCULATE</button>
+                    <button class="reset-btn" id="reset1">RESET</button>
+                </div>
+                <div class="error-container">
+                    <div class="error-message" id="percent1-error">Please enter a valid number</div>
+                    <div class="error-message" id="value1-error">Please enter a valid number</div>
+                </div>
+                
+                <div class="result-container" id="result1">
+                    <p class="result-text">Result:</p>
+                    <div class="calculation-steps" id="steps1"></div>
+                    <p class="result-value" id="result1-value">0</p>
+                    <button class="copy-btn" id="copy1">
+                        Copy result
+                        <div class="tooltip" id="tooltip1">Copied!</div>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Calculator 2: X is what percent of Y? -->
+            <div class="calculator" id="calculator2">
+                <h2>X is what percent of Y?</h2>
+                <p>Find what percentage one number is of another.</p>
+                
+                <div class="sentence-input">
+                    <input type="number" id="value2a" placeholder="X" step="any">
+                    <span class="input-label">is what percent of</span>
+                    <input type="number" id="value2b" placeholder="Y" step="any">
+                    <span class="input-label">?</span>
+                    <button class="calculate-btn" id="calculate2">CALCULATE</button>
+                    <button class="reset-btn" id="reset2">RESET</button>
+                </div>
+                <div class="error-container">
+                    <div class="error-message" id="value2a-error">Please enter a valid number</div>
+                    <div class="error-message" id="value2b-error">Please enter a valid number</div>
+                </div>
+                
+                <div class="result-container" id="result2">
+                    <p class="result-text">Result:</p>
+                    <div class="calculation-steps" id="steps2"></div>
+                    <p class="result-value" id="result2-value">0%</p>
+                    <button class="copy-btn" id="copy2">
+                        Copy result
+                        <div class="tooltip" id="tooltip2">Copied!</div>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Calculator 3: Percentage Increase/Decrease -->
+            <div class="calculator" id="calculator3">
+                <h2>Percentage Increase/Decrease</h2>
+                <p>Calculate the percentage change between two values.</p>
+                
+                <div class="sentence-input">
+                    <span class="input-label">Change from</span>
+                    <input type="number" id="initial" placeholder="initial value" step="any">
+                    <span class="input-label">to</span>
+                    <input type="number" id="final" placeholder="final value" step="any">
+                    <button class="calculate-btn" id="calculate3">CALCULATE</button>
+                    <button class="reset-btn" id="reset3">RESET</button>
+                </div>
+                <div class="error-container">
+                    <div class="error-message" id="initial-error">Please enter a valid number</div>
+                    <div class="error-message" id="final-error">Please enter a valid number</div>
+                </div>
+                
+                <div class="result-container" id="result3">
+                    <p class="result-text">Percentage Change:</p>
+                    <div class="calculation-steps" id="steps3"></div>
+                    <p class="result-value" id="result3-value">0%</p>
+                    <button class="copy-btn" id="copy3">
+                        Copy result
+                        <div class="tooltip" id="tooltip3">Copied!</div>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Calculator 4: Percentage Change -->
+            <div class="calculator" id="calculator4">
+                <h2>Percentage Change</h2>
+                <p>Calculate a new value after applying a percentage change.</p>
+                
+                <div class="sentence-input">
+                    <span class="input-label">Change</span>
+                    <input type="number" id="original" placeholder="original value" step="any">
+                    <span class="input-label">by</span>
+                    <input type="number" id="percent-change" placeholder="percentage" step="any">
+                    <span class="input-label">%</span>
+                    <button class="calculate-btn" id="calculate4">CALCULATE</button>
+                    <button class="reset-btn" id="reset4">RESET</button>
+                </div>
+                <div class="error-container">
+                    <div class="error-message" id="original-error">Please enter a valid number</div>
+                    <div class="error-message" id="percent-change-error">Please enter a valid number</div>
+                </div>
+                
+                <div class="result-container" id="result4">
+                    <p class="result-text">New Value:</p>
+                    <div class="calculation-steps" id="steps4"></div>
+                    <p class="result-value" id="result4-value">0</p>
+                    <button class="copy-btn" id="copy4">
+                        Copy result
+                        <div class="tooltip" id="tooltip4">Copied!</div>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Calculator 5: Percentage to Fraction -->
+            <div class="calculator" id="calculator5">
+                <h2>Percentage to Fraction</h2>
+                <p>Convert a percentage to a simplified fraction.</p>
+                
+                <div class="sentence-input">
+                    <span class="input-label">Convert</span>
+                    <input type="number" id="percent-input" placeholder="percentage" step="any">
+                    <span class="input-label">% to fraction</span>
+                    <button class="calculate-btn" id="calculate5">CALCULATE</button>
+                    <button class="reset-btn" id="reset5">RESET</button>
+                </div>
+                <div class="error-container">
+                    <div class="error-message" id="percent-input-error">Please enter a valid number</div>
+                </div>
+                
+                <div class="result-container" id="result5">
+                    <p class="result-text">Fraction:</p>
+                    <div class="calculation-steps" id="steps5"></div>
+                    <p class="result-value" id="result5-value">0</p>
+                    <button class="copy-btn" id="copy5">
+                        Copy result
+                        <div class="tooltip" id="tooltip5">Copied!</div>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Calculator 6: Fraction to Percentage -->
+            <div class="calculator" id="calculator6">
+                <h2>Fraction to Percentage</h2>
+                <p>Convert a fraction to a percentage.</p>
+                
+                <div class="sentence-input">
+                    <span class="input-label">Convert</span>
+                    <input type="number" id="numerator" placeholder="numerator" step="any">
+                    <span class="input-label">/</span>
+                    <input type="number" id="denominator" placeholder="denominator" step="any">
+                    <span class="input-label">to percentage</span>
+                    <button class="calculate-btn" id="calculate6">CALCULATE</button>
+                    <button class="reset-btn" id="reset6">RESET</button>
+                </div>
+                <div class="error-container">
+                    <div class="error-message" id="numerator-error">Please enter a valid number</div>
+                    <div class="error-message" id="denominator-error">Please enter a valid number</div>
+                </div>
+                
+                <div class="result-container" id="result6">
+                    <p class="result-text">Percentage:</p>
+                    <div class="calculation-steps" id="steps6"></div>
+                    <p class="result-value" id="result6-value">0%</p>
+                    <button class="copy-btn" id="copy6">
+                        Copy result
+                        <div class="tooltip" id="tooltip6">Copied!</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- History Section -->
+        <div class="history-container">
+            <div class="history-title">
+                <h2>Calculation History</h2>
+                <button class="clear-history" id="clear-history">Clear History</button>
+            </div>
+            <div class="history-list" id="history-list">
+                <div class="no-history">No calculations yet</div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 Percentage Calculator. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
