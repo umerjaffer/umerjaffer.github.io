@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://umerjaffer.github.io/sitemap.xml 
