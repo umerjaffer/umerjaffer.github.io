@@ -1,0 +1,133 @@
+﻿1. index.html
+Current Title: Percentage Calculator | Free Online Math Tool | Calculate Percentages Current Description: Fractions & More
+New Meta Title:
+* "Percentage Calculator | Free Online Tool to Calculate Percentages & More"
+New meta description:
+* "Use our free percentage calculator to easily calculate percentages, discounts, percentage increases, and more. Accurate, fast, and easy-to-use math tools for every need."
+Keywords:
+* percentage calculator, percentage increase calculator, discount calculator, calculate percentage, free online percentage calculator, percentage change calculator, calculate percentage increase online
+________________
+
+
+2. about.html
+Current Title: About Us | Easy Percentage Calculator - Your Math Companion Current Description: Learn about Easy Percentage Calculator's mission to make mathematics accessible to everyone through our free online calculators and educational tools.
+New Meta Title:
+* "About Us | Easy Percentage Calculator - Simplifying Math with Free Online Tools"
+New meta description:
+* "Discover the mission of Easy Percentage Calculator. We aim to make math easy with free, accurate online calculators for percentages, fractions, and more."
+Keywords:
+* about easy percentage calculator, online math tools, free percentage calculator, easy percentage calculator mission, online tools for percentage calculation, about free math calculator site
+________________
+
+
+3. contact.html
+Current Title: Contact Us | Easy Percentage Calculator - Your Math Companion Current Description: Get in touch with Easy Percentage Calculator. We're here to help with any questions about our calculators or mathematical tools.
+New Meta Title:
+* "Contact Us | Get Support for Easy Percentage Calculator"
+New meta description:
+* "Have questions or need support? Contact Easy Percentage Calculator for help with our online tools and educational resources. We're here to assist you."
+Keywords:
+* contact easy percentage calculator, get support for math tools, contact us for percentage calculator help, support for percentage change calculator
+________________
+
+
+4. terms.html
+Current Title: Terms of Use | Easy Percentage Calculator - Your Math Companion Current Description: Read our terms of use to understand how to properly use our online calculators and mathematical tools.
+New Meta Title:
+* "Terms of Use | Easy Percentage Calculator - Understanding Our Policies"
+New meta description:
+* "Review the terms of use for Easy Percentage Calculator. Learn how to responsibly use our free online calculators and mathematical tools."
+Keywords:
+* terms of use percentage calculator, calculator terms of service, terms for using percentage calculator tool, easy percentage calculator terms of service
+________________
+
+
+5. privacy.html
+Current Title: Privacy Policy | Easy Percentage Calculator - Your Math Companion Current Description: Learn about how Easy Percentage Calculator protects your privacy and handles your data when you use our online calculators and tools.
+New Meta Title:
+* "Privacy Policy | Easy Percentage Calculator - Protecting Your Data"
+New meta description:
+* "Learn how Easy Percentage Calculator ensures your privacy and protects your data while you use our free online math tools."
+Keywords:
+* privacy policy percentage calculator, data protection policy, privacy policy for online math tools, data security on percentage calculators
+________________
+
+
+6. cookies.html
+Current Title: Cookie Policy | Easy Percentage Calculator - Your Math Companion Current Description: Learn about how we use cookies to improve your experience on our calculator website.
+New Meta Title:
+* "Cookie Policy | Easy Percentage Calculator - Improving Your Experience"
+New meta description:
+* "Understand how Easy Percentage Calculator uses cookies to enhance your experience. Learn more about our cookie policy for improved site functionality."
+Keywords:
+* cookie policy, cookies percentage calculator, cookie use on percentage calculator site, improving experience with cookies
+________________
+
+
+7. what-is-x-percent-of-y-calculator.html
+Current Title: What is X% of Y Calculator | Calculate Percentage of a Number Current Description: Calculate what percentage X is of Y with our free online calculator. Easy-to-use tool for finding percentages of numbers with step-by-step explanations.
+New Meta Title:
+* "What is X% of Y Calculator | Easily Calculate Percentages of Numbers"
+New meta description:
+* "Use our free 'What is X% of Y' calculator to easily calculate percentages of any number. Accurate, fast, and simple percentage calculations with step-by-step guides."
+Keywords:
+* X% of Y calculator, percentage of a number calculator,percentage finder, find percentage, calculate percentage of a number, X is what percent of Y calculator
+________________
+
+
+8. x-is-what-percent-of-y-calculator.html
+Current Title: X is what % of Y Calculator | Find Percentage Value Current Description: Calculate what percentage one number is of another with our free online calculator. Easy-to-use tool for finding percentage values with step-by-step explanations.
+New Meta Title:
+* "X is What Percent of Y Calculator | Find the Percentage Value Easily"
+New meta description:
+* "Find the percentage value with our X is what percent of Y calculator. Quickly calculate percentage values with our free and easy-to-use online tool."
+Keywords:
+* percentage value calculator, X percent of Y calculator, percentage finder, find percentage, calculate X percent of Y, find percentage value easily
+________________
+
+
+9. percentage-increase-calculator.html
+Current Title: Percentage Increase/Decrease Calculator | Calculate Percentage Change Current Description: Calculate percentage increase or decrease between two numbers with our free online calculator. Easy-to-use tool for finding percentage changes with step-by-step explanations.
+New Meta Title:
+* "Percentage Increase Calculator | Calculate Percentage Change Easily"
+New meta description:
+* "Use our free percentage increase calculator to calculate percentage changes between two numbers. Simple, fast, and accurate calculations with step-by-step guides."
+Keywords:
+* percentage increase calculator, percentage change calculator,calculate percentage increase and decrease, find percentage change between numbers
+________________
+
+
+10. percentage-change-calculator.html
+Current Title: Percentage Change Calculator | Calculate Value After Change Current Description: Calculate the final value after applying a percentage change with our free online calculator. Easy-to-use tool for finding values after percentage changes with step-by-step explanations.
+New Meta Title:
+* "Percentage Change Calculator | Calculate Final Value After Percentage Change"
+New meta description:
+* "Easily calculate the final value after applying a percentage change with our free online percentage change calculator. Fast and accurate results with detailed explanations."
+Keywords:
+* percentage change calculator, final value calculator, calculate value after percentage change, online percentage change calculator
+________________
+
+
+11. percentage-to-fraction-calculator.html
+Current Title: Percentage to Fraction Calculator | Convert Percentages to Fractions Current Description: Convert any percentage to a simplified fraction with our free online calculator. Easy-to-use tool with step-by-step explanations and automatic simplification.
+New Meta Title:
+* "Percentage to Fraction Calculator | Convert Percentages into Fractions"
+New meta description:
+* "Use our percentage to fraction calculator to easily convert any percentage into a simplified fraction. Simple and accurate with step-by-step explanations."
+Keywords:
+* percentage to fraction calculator, convert percentage to fraction, percentage to fraction conversion tool, easily convert percentage to fraction
+________________
+
+
+12. fraction-to-percentage-calculator.html
+Current Title: Fraction to Percentage Calculator | Convert Fractions to Percentages Current Description: Convert fractions to percentages with our free online calculator. Easy-to-use tool for converting fractions to their percentage equivalent with step-by-step explanations.
+New Meta Title:
+* "Fraction to Percentage Calculator | Convert Fractions to Percentages"
+New meta description:
+* "Use our free online fraction to percentage calculator to easily convert fractions into percentages with accurate, step-by-step explanations."
+Keywords:
+* fraction to percentage calculator, convert fraction to percentage, convert fraction to percentage online, easy fraction to percentage calculator
+________________
+
+
+These optimized meta titles, descriptions, and keywords will help improve the SEO performance for each page and enhance search engine visibility for your website.

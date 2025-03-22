@@ -1,3 +1,19 @@
 User-agent: *
 Allow: /
-Sitemap: https://umerjaffer.github.io/sitemap.xml 
+Allow: /calculators/
+Allow: /images/
+Allow: /styles.css
+Allow: /script.js
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /.git/
+Disallow: /.DS_Store
+Disallow: /*.txt$
+Disallow: /*.xml$
+
+# Sitemap location
+Sitemap: https://easypercentagecalculators.com/sitemap.xml
+
+# Crawl-delay for all bots
+Crawl-delay: 10 
