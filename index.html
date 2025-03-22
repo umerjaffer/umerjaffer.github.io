@@ -1,225 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4NPRZPC9ND"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-4NPRZPC9ND');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KLWKBV5M');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Percentage Calculator</title>
+    <title>Percentage Calculator | Free Online Math Tool | Calculate Percentages, Fractions & More</title>
+    <meta name="description" content="Free online percentage calculator with 6 calculation types: percentage of a number, percentage increase/decrease, fraction conversion, and more. Easy-to-use tool for quick math calculations.">
+    <meta name="keywords" content="percentage calculator, online calculator, math tool, percentage increase, percentage decrease, fraction calculator, percentage to fraction">
+    <meta name="author" content="CalcPro">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://calcpro.com/percentage-calculator">
+    
+    <!-- Optimized Font Awesome Loading -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css">
+    
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcpro.com/percentage-calculator">
+    <meta property="og:title" content="Percentage Calculator | Free Online Math Tool">
+    <meta property="og:description" content="Free online percentage calculator with 6 calculation types. Calculate percentages, fractions, increases and decreases easily.">
+    <meta property="og:image" content="https://calcpro.com/images/percentage-calculator-preview.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://calcpro.com/percentage-calculator">
+    <meta property="twitter:title" content="Percentage Calculator | Free Online Math Tool">
+    <meta property="twitter:description" content="Free online percentage calculator with 6 calculation types. Calculate percentages, fractions, increases and decreases easily.">
+    <meta property="twitter:image" content="https://calcpro.com/images/percentage-calculator-preview.jpg">
+
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Percentage Calculator",
+        "url": "https://calcpro.com/percentage-calculator",
+        "description": "Free online percentage calculator with 6 calculation types: percentage of a number, percentage increase/decrease, fraction conversion, and more.",
+        "applicationCategory": "Calculator",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Calculate percentage of a number",
+            "Find percentage increase/decrease",
+            "Convert between percentages and fractions",
+            "Calculate percentage change"
+        ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "How do I calculate a percentage of a number?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To calculate a percentage of a number, multiply the number by the percentage and divide by 100. For example, to find 15% of 200, multiply 200 by 15 and divide by 100: (200 × 15) ÷ 100 = 30."
+            }
+        }, {
+            "@type": "Question",
+            "name": "How do I convert a percentage to a fraction?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To convert a percentage to a fraction, divide the percentage by 100 and simplify the resulting fraction. For example, 75% = 75/100 = 3/4."
+            }
+        }, {
+            "@type": "Question",
+            "name": "How do I calculate percentage increase or decrease?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To calculate percentage increase or decrease, subtract the old value from the new value, divide by the old value, and multiply by 100. For example, if a price increased from $100 to $150, the percentage increase is: ((150 - 100) ÷ 100) × 100 = 50%."
+            }
+        }]
+    }
+    </script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Percentage Calculator</h1>
-            <p class="description">A simple and intuitive tool for all your percentage calculation needs.</p>
-        </header>
-        
-        <div class="tabs">
-            <button class="tab active" data-tab="calculator1">What is X% of Y?</button>
-            <button class="tab" data-tab="calculator2">X is what percent of Y?</button>
-            <button class="tab" data-tab="calculator3">Percentage Increase/Decrease</button>
-            <button class="tab" data-tab="calculator4">Percentage Change</button>
-            <button class="tab" data-tab="calculator5">Percentage to Fraction</button>
-            <button class="tab" data-tab="calculator6">Fraction to Percentage</button>
-        </div>
-        
-        <div class="calculator-container">
-            <!-- Calculator 1: What is X% of Y? -->
-            <div class="calculator active" id="calculator1">
-                <h2>What is X% of Y?</h2>
-                <p>Calculate a percentage of a number.</p>
-                
-                <div class="sentence-input">
-                    <span class="input-label">What is</span>
-                    <input type="number" id="percent1" placeholder="X" step="any">
-                    <span class="input-label">% of</span>
-                    <input type="number" id="value1" placeholder="Y" step="any">
-                    <span class="input-label">?</span>
-                    <button class="calculate-btn" id="calculate1">CALCULATE</button>
-                    <button class="reset-btn" id="reset1">RESET</button>
-                </div>
-                <div class="error-container">
-                    <div class="error-message" id="percent1-error">Please enter a valid number</div>
-                    <div class="error-message" id="value1-error">Please enter a valid number</div>
-                </div>
-                
-                <div class="result-container" id="result1">
-                    <p class="result-text">Result:</p>
-                    <div class="calculation-steps" id="steps1"></div>
-                    <p class="result-value" id="result1-value">0</p>
-                    <button class="copy-btn" id="copy1">
-                        Copy result
-                        <div class="tooltip" id="tooltip1">Copied!</div>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Calculator 2: X is what percent of Y? -->
-            <div class="calculator" id="calculator2">
-                <h2>X is what percent of Y?</h2>
-                <p>Find what percentage one number is of another.</p>
-                
-                <div class="sentence-input">
-                    <input type="number" id="value2a" placeholder="X" step="any">
-                    <span class="input-label">is what percent of</span>
-                    <input type="number" id="value2b" placeholder="Y" step="any">
-                    <span class="input-label">?</span>
-                    <button class="calculate-btn" id="calculate2">CALCULATE</button>
-                    <button class="reset-btn" id="reset2">RESET</button>
-                </div>
-                <div class="error-container">
-                    <div class="error-message" id="value2a-error">Please enter a valid number</div>
-                    <div class="error-message" id="value2b-error">Please enter a valid number</div>
-                </div>
-                
-                <div class="result-container" id="result2">
-                    <p class="result-text">Result:</p>
-                    <div class="calculation-steps" id="steps2"></div>
-                    <p class="result-value" id="result2-value">0%</p>
-                    <button class="copy-btn" id="copy2">
-                        Copy result
-                        <div class="tooltip" id="tooltip2">Copied!</div>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Calculator 3: Percentage Increase/Decrease -->
-            <div class="calculator" id="calculator3">
-                <h2>Percentage Increase/Decrease</h2>
-                <p>Calculate the percentage change between two values.</p>
-                
-                <div class="sentence-input">
-                    <span class="input-label">Change from</span>
-                    <input type="number" id="initial" placeholder="initial value" step="any">
-                    <span class="input-label">to</span>
-                    <input type="number" id="final" placeholder="final value" step="any">
-                    <button class="calculate-btn" id="calculate3">CALCULATE</button>
-                    <button class="reset-btn" id="reset3">RESET</button>
-                </div>
-                <div class="error-container">
-                    <div class="error-message" id="initial-error">Please enter a valid number</div>
-                    <div class="error-message" id="final-error">Please enter a valid number</div>
-                </div>
-                
-                <div class="result-container" id="result3">
-                    <p class="result-text">Percentage Change:</p>
-                    <div class="calculation-steps" id="steps3"></div>
-                    <p class="result-value" id="result3-value">0%</p>
-                    <button class="copy-btn" id="copy3">
-                        Copy result
-                        <div class="tooltip" id="tooltip3">Copied!</div>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Calculator 4: Percentage Change -->
-            <div class="calculator" id="calculator4">
-                <h2>Percentage Change</h2>
-                <p>Calculate a new value after applying a percentage change.</p>
-                
-                <div class="sentence-input">
-                    <span class="input-label">Change</span>
-                    <input type="number" id="original" placeholder="original value" step="any">
-                    <span class="input-label">by</span>
-                    <input type="number" id="percent-change" placeholder="percentage" step="any">
-                    <span class="input-label">%</span>
-                    <button class="calculate-btn" id="calculate4">CALCULATE</button>
-                    <button class="reset-btn" id="reset4">RESET</button>
-                </div>
-                <div class="error-container">
-                    <div class="error-message" id="original-error">Please enter a valid number</div>
-                    <div class="error-message" id="percent-change-error">Please enter a valid number</div>
-                </div>
-                
-                <div class="result-container" id="result4">
-                    <p class="result-text">New Value:</p>
-                    <div class="calculation-steps" id="steps4"></div>
-                    <p class="result-value" id="result4-value">0</p>
-                    <button class="copy-btn" id="copy4">
-                        Copy result
-                        <div class="tooltip" id="tooltip4">Copied!</div>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Calculator 5: Percentage to Fraction -->
-            <div class="calculator" id="calculator5">
-                <h2>Percentage to Fraction</h2>
-                <p>Convert a percentage to a simplified fraction.</p>
-                
-                <div class="sentence-input">
-                    <span class="input-label">Convert</span>
-                    <input type="number" id="percent-input" placeholder="percentage" step="any">
-                    <span class="input-label">% to fraction</span>
-                    <button class="calculate-btn" id="calculate5">CALCULATE</button>
-                    <button class="reset-btn" id="reset5">RESET</button>
-                </div>
-                <div class="error-container">
-                    <div class="error-message" id="percent-input-error">Please enter a valid number</div>
-                </div>
-                
-                <div class="result-container" id="result5">
-                    <p class="result-text">Fraction:</p>
-                    <div class="calculation-steps" id="steps5"></div>
-                    <p class="result-value" id="result5-value">0</p>
-                    <button class="copy-btn" id="copy5">
-                        Copy result
-                        <div class="tooltip" id="tooltip5">Copied!</div>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Calculator 6: Fraction to Percentage -->
-            <div class="calculator" id="calculator6">
-                <h2>Fraction to Percentage</h2>
-                <p>Convert a fraction to a percentage.</p>
-                
-                <div class="sentence-input">
-                    <span class="input-label">Convert</span>
-                    <input type="number" id="numerator" placeholder="numerator" step="any">
-                    <span class="input-label">/</span>
-                    <input type="number" id="denominator" placeholder="denominator" step="any">
-                    <span class="input-label">to percentage</span>
-                    <button class="calculate-btn" id="calculate6">CALCULATE</button>
-                    <button class="reset-btn" id="reset6">RESET</button>
-                </div>
-                <div class="error-container">
-                    <div class="error-message" id="numerator-error">Please enter a valid number</div>
-                    <div class="error-message" id="denominator-error">Please enter a valid number</div>
-                </div>
-                
-                <div class="result-container" id="result6">
-                    <p class="result-text">Percentage:</p>
-                    <div class="calculation-steps" id="steps6"></div>
-                    <p class="result-value" id="result6-value">0%</p>
-                    <button class="copy-btn" id="copy6">
-                        Copy result
-                        <div class="tooltip" id="tooltip6">Copied!</div>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- History Section -->
-        <div class="history-container">
-            <div class="history-title">
-                <h2>Calculation History</h2>
-                <button class="clear-history" id="clear-history">Clear History</button>
-            </div>
-            <div class="history-list" id="history-list">
-                <div class="no-history">No calculations yet</div>
-            </div>
-        </div>
-        
-        <footer>
-            <p>&copy; 2025 Percentage Calculator. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact</a>
-            </div>
-        </footer>
-    </div>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLWKBV5M"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="calculator-logo.png" alt="Calculator Logo" style="width: 40px; height: 40px; vertical-align: middle;">
+                    <span>Easy%Calc</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h1>Percentage Calculator</h1>
+            <p class="main-description">Free online tool for calculating percentages, fractions, and percentage changes. Choose from 6 different calculation types below.</p>
+            
+            <section class="calculator-tabs" aria-label="Calculator Types">
+                <h2 class="visually-hidden">Available Calculators</h2>
+                <div class="tab-buttons">
+                    <button class="tab-btn active touch-target" data-calculator="what-is-x-of-y" aria-selected="true">
+                        <i class="fas fa-percentage" aria-hidden="true"></i>
+                        <span>What is X% of Y?</span>
+                    </button>
+                    <button class="tab-btn touch-target" data-calculator="x-is-what-percent-of-y">
+                        <i class="fas fa-equals" aria-hidden="true"></i>
+                        <span>X is what % of Y?</span>
+                    </button>
+                    <button class="tab-btn touch-target" data-calculator="percentage-increase">
+                        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                        <span>Percentage Increase/Decrease</span>
+                    </button>
+                    <button class="tab-btn touch-target" data-calculator="percentage-change">
+                        <i class="fas fa-exchange-alt" aria-hidden="true"></i>
+                        <span>Percentage Change</span>
+                    </button>
+                    <button class="tab-btn touch-target" data-calculator="percentage-to-fraction">
+                        <i class="fas fa-divide" aria-hidden="true"></i>
+                        <span>Percentage to Fraction</span>
+                    </button>
+                    <button class="tab-btn touch-target" data-calculator="fraction-to-percentage">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                        <span>Fraction to Percentage</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="calculator-content" aria-label="Calculator Interface">
+                <!-- What is X% of Y? -->
+                <div class="calculator-section active" id="what-is-x-of-y" role="tabpanel" aria-labelledby="tab-what-is-x-of-y">
+                    <h3 class="visually-hidden">What is X% of Y Calculator</h3>
+                    <div class="calculation-line">
+                        <span>What is</span>
+                        <div class="input-group">
+                            <input type="number" id="percentage1" aria-label="Enter percentage value" min="0" max="100" step="0.01">
+                            <span class="input-suffix">%</span>
+                        </div>
+                        <span>of</span>
+                        <div class="input-group">
+                            <input type="number" id="value1" aria-label="Enter total value">
+                        </div>
+                        <span>?</span>
+                        <button class="calculate-btn" aria-label="Calculate result">
+                            <span class="btn-text">Calculate</span>
+                            <span class="btn-loader"></span>
+                        </button>
+                        <div class="result-container">
+                            <span class="result">= <span id="result1">0</span></span>
+                            <button class="copy-btn" title="Copy result" aria-label="Copy result to clipboard">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="error-message" id="error1" role="alert" aria-live="polite"></div>
+                </div>
+
+                <!-- X is what percent of Y? -->
+                <div class="calculator-section" id="x-is-what-percent-of-y">
+                    <div class="calculation-line">
+                        <div class="input-group">
+                            <input type="number" id="value2">
+                        </div>
+                        <span>is what percent of</span>
+                        <div class="input-group">
+                            <input type="number" id="value3">
+                        </div>
+                        <span>?</span>
+                        <button class="calculate-btn" aria-label="Calculate result">
+                            <span class="btn-text">Calculate</span>
+                            <span class="btn-loader"></span>
+                        </button>
+                        <div class="result-container">
+                            <span class="result">= <span id="result2">0</span>%</span>
+                            <button class="copy-btn" title="Copy result" aria-label="Copy result to clipboard">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="error-message" id="error2" role="alert" aria-live="polite"></div>
+                </div>
+
+                <!-- Percentage Increase/Decrease -->
+                <div class="calculator-section" id="percentage-increase">
+                    <div class="calculation-line">
+                        <span>Change from</span>
+                        <input type="number" id="value4">
+                        <span>to</span>
+                        <input type="number" id="value5">
+                        <button class="calculate-btn">Calculate</button>
+                        <span class="result">= <span id="result3">0</span>%
+                            <button class="copy-btn" title="Copy result">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                </svg>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Percentage Change -->
+                <div class="calculator-section" id="percentage-change">
+                    <div class="calculation-line">
+                        <span>Change</span>
+                        <input type="number" id="value6">
+                        <span>by</span>
+                        <input type="number" id="percentage2">
+                        <span>%</span>
+                        <button class="calculate-btn">Calculate</button>
+                        <span class="result">= <span id="result4">0</span>
+                            <button class="copy-btn" title="Copy result">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                </svg>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Percentage to Fraction -->
+                <div class="calculator-section" id="percentage-to-fraction">
+                    <div class="calculation-line">
+                        <span>Convert</span>
+                        <input type="number" id="percentage3">
+                        <span>% to fraction</span>
+                        <button class="calculate-btn">Calculate</button>
+                        <span class="result">= <span id="result5">0</span>
+                            <button class="copy-btn" title="Copy result">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                </svg>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Fraction to Percentage -->
+                <div class="calculator-section" id="fraction-to-percentage">
+                    <div class="calculation-line">
+                        <span>Convert</span>
+                        <input type="number" id="numerator">
+                        <span>/</span>
+                        <input type="number" id="denominator">
+                        <span>to percentage</span>
+                        <button class="calculate-btn">Calculate</button>
+                        <span class="result">= <span id="result6">0</span>%
+                            <button class="copy-btn" title="Copy result">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                </svg>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="related-calculators">
+                <h2>Related Calculators</h2>
+                <div class="calculator-links">
+                    <a href="#what-is-x-of-y" class="calc-link" data-calculator="what-is-x-of-y">
+                        <i class="fas fa-percentage"></i>
+                        <span>What is X% of Y Calculator</span>
+                    </a>
+                    <a href="#x-is-what-percent-of-y" class="calc-link" data-calculator="x-is-what-percent-of-y">
+                        <i class="fas fa-equals"></i>
+                        <span>X is what % of Y Calculator</span>
+                    </a>
+                    <a href="#percentage-increase" class="calc-link" data-calculator="percentage-increase">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>Percentage Increase/Decrease Calculator</span>
+                    </a>
+                    <a href="#percentage-change" class="calc-link" data-calculator="percentage-change">
+                        <i class="fas fa-exchange-alt"></i>
+                        <span>Percentage Change Calculator</span>
+                    </a>
+                    <a href="#percentage-to-fraction" class="calc-link" data-calculator="percentage-to-fraction">
+                        <i class="fas fa-divide"></i>
+                        <span>Percentage to Fraction Calculator</span>
+                    </a>
+                    <a href="#fraction-to-percentage" class="calc-link" data-calculator="fraction-to-percentage">
+                        <i class="fas fa-times"></i>
+                        <span>Fraction to Percentage Calculator</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="calculator-examples">
+                <h2>How to Use Each Calculator</h2>
+                
+                <div class="example-section">
+                    <h3><i class="fas fa-percentage"></i> What is X% of Y?</h3>
+                    <p class="example-formula">Formula: (X/100) × Y</p>
+                    <p class="example-description">This calculator helps you find a percentage of any number. For example, calculating a 15% tip on a $50 bill.</p>
+                    <div class="example-case">
+                        <strong>Example:</strong> What is 15% of 200?
+                        <p>Solution: (15/100) × 200 = 30</p>
+                    </div>
+                </div>
+
+                <div class="example-section">
+                    <h3><i class="fas fa-equals"></i> X is what % of Y?</h3>
+                    <p class="example-formula">Formula: (X/Y) × 100</p>
+                    <p class="example-description">Use this to find what percentage one number is of another. Perfect for calculating success rates or proportions.</p>
+                    <div class="example-case">
+                        <strong>Example:</strong> 25 is what percent of 200?
+                        <p>Solution: (25/200) × 100 = 12.5%</p>
+                    </div>
+                </div>
+
+                <div class="example-section">
+                    <h3><i class="fas fa-arrow-up"></i> Percentage Increase/Decrease</h3>
+                    <p class="example-formula">Formula: ((New Value - Old Value) / Old Value) × 100</p>
+                    <p class="example-description">Calculate how much a value has increased or decreased in percentage terms. Useful for tracking growth or decline.</p>
+                    <div class="example-case">
+                        <strong>Example:</strong> Price increased from $100 to $150
+                        <p>Solution: ((150 - 100) / 100) × 100 = 50% increase</p>
+                    </div>
+                </div>
+
+                <div class="example-section">
+                    <h3><i class="fas fa-exchange-alt"></i> Percentage Change</h3>
+                    <p class="example-formula">Formula: Original Value ± (Original Value × Percentage/100)</p>
+                    <p class="example-description">Find the new value after applying a percentage increase or decrease. Great for calculating discounts or markups.</p>
+                    <div class="example-case">
+                        <strong>Example:</strong> Increase 200 by 25%
+                        <p>Solution: 200 + (200 × 25/100) = 250</p>
+                    </div>
+                </div>
+
+                <div class="example-section">
+                    <h3><i class="fas fa-divide"></i> Percentage to Fraction</h3>
+                    <p class="example-formula">Formula: Percentage ÷ 100, then simplify</p>
+                    <p class="example-description">Convert percentages to their simplest fraction form. Useful for mathematical calculations and comparisons.</p>
+                    <div class="example-case">
+                        <strong>Example:</strong> Convert 75% to fraction
+                        <p>Solution: 75% = 75/100 = 3/4</p>
+                    </div>
+                </div>
+
+                <div class="example-section">
+                    <h3><i class="fas fa-times"></i> Fraction to Percentage</h3>
+                    <p class="example-formula">Formula: (Numerator ÷ Denominator) × 100</p>
+                    <p class="example-description">Convert fractions to their percentage equivalent. Helpful for understanding proportions in percentage terms.</p>
+                    <div class="example-case">
+                        <strong>Example:</strong> Convert 3/4 to percentage
+                        <p>Solution: (3 ÷ 4) × 100 = 75%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Your Math Companion</h3>
+                <p>Your trusted online calculation tool for quick and accurate percentage calculations. Making math easier for everyone.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Use</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Easy Percentage Calculators. All rights reserved.</p>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
-</html>
+</html> 
